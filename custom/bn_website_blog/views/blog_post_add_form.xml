@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="blog_post_view_form_add_inherit" model="ir.ui.view">
+            <field name="name">blog.post.view.form.add</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.blog_post_view_form_add"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='blog_id']" position="after">
+                   <field name="company_id" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

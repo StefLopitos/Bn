@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="website_blog_form_inherit" model="ir.ui.view">
+            <field name="name">website.blog.form.inherit</field>
+            <field name="model">blog.blog</field>
+            <field name="inherit_id" ref="website_blog.view_blog_blog_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='subtitle']" position="after">
+                   <field name="company_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
